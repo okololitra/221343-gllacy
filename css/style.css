@@ -68,8 +68,8 @@ body > input[type="radio"] {
 
 .slide-btn {
   display: inline-block;
-  padding: 12px 50px;
-
+  padding: 11px 45px;
+    margin-top: -15px;
   font-weight: 600;
   font-size: 31px;
   line-height: 41px;
@@ -172,15 +172,17 @@ body > input[type="radio"] {
   padding: 0;
   margin: 0;
   list-style: none;
-     margin-top: 23px;
+  margin-top: 20px;
+    margin-left: -180px;
+    
 }
 
 .menu li {
       display: inline-block;
-      margin-right: 28px;
       position: relative;
       color: white;
       padding: 10px;
+    padding-right: 10px;
 }
 
 .menu a {
@@ -217,7 +219,7 @@ body > input[type="radio"] {
 .submenu-wrapp {
   padding-top: 5px;
   position: absolute;
-  display: none;
+  display: block;
   top: 100%;
   left: 0;
 }
@@ -230,7 +232,7 @@ body > input[type="radio"] {
   width: 140px;
   background: white;
   padding: 6px;
- border-radius: 10px;
+ border-radius: 6px;
 }
 
 .menu li:hover .submenu-wrapp {
@@ -239,10 +241,12 @@ body > input[type="radio"] {
 
 .submenu li {
   display: block;
+    text-decoration: none;
 }
 .submenu li:hover {
   background: #323232;
   border-radius: 20px;
+    
 }
 .submenu a {
   color: black;
@@ -250,6 +254,7 @@ body > input[type="radio"] {
     font-size: 14px;
     line-height: 16px;
     font-weight: 500;
+    text-decoration: none;
 }
 .submenu a:hover{
     color: black;
@@ -278,18 +283,175 @@ body > input[type="radio"] {
     background:rgba(225, 225, 225, 0.2) url(../img/lupa.png) no-repeat 8px 8px;
     border-radius: 50px;
     width: 32px;
-    height: 32px;   
+    height: 32px;  
+    position: relative;
+
+}
+.search::before{
+    content: "";
+    width: 100px;
+    height: 20px;
+    display: block;
+    position: absolute;
+    background: #fff;
+    top:25px;
+    right:0px;
+    z-index: 10;
+    
+}
+.search:hover{
+    background:#fff url(../img/lupa-hover.png) no-repeat 8px 8px;
+    border-radius: 50px;
+    width: 32px;
+    height: 32px;
 }
 
-.login{
-    
-    height: 32px;
-    width: 92px;
-    border-radius: 20px;
-    background: rgba(225, 225, 225, 0.2) url(../img/OPEN.png) no-repeat 16px 6px;
-    
+.modal-search{
+    z-index: 1;
+    display: none;
+    position: absolute;
+    right: 283px;
+    width: 341px;
+    height: 84px;
+    background: #f8f7f4 ;
+    border-radius: 6px; 
+    top: 60px;
+    box-shadow: 0px 20px 20px rgba(0,0,0,0.4);
+}
+.user-block a:hover+.modal-search{
+    display: block;
+}
+.user-block:hover .modal-search{
+    display: block;
+}
+.modal-search input {
+    display: block;
+    width: 296px;
+    height: 44px;
+    border-radius: 6px;
+    margin: 18px 12px;
+    padding-left: 15px;
     
 }
+.login{
+    display: inline-block;
+    vertical-align: top;
+    color: #fff;
+     font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 500;
+    text-decoration: none;
+    background-color:rgba(225, 225, 225, 0.2); 
+    padding: 8px 10px;
+    padding-left: 46px;
+    padding-right: 14px;
+    border-radius: 20px;
+    position: relative;
+}
+
+.login::before{
+    content: "";
+    width: 21px;
+    height: 19px;
+    top: 8px;
+    right: 54px;
+    background:url(../img/OPEN.png) no-repeat ;
+    position: absolute; 
+}
+
+.login:hover{
+    background: #fff;
+    color: #000;
+}
+.login:hover::before{
+    content: "";
+    width: 21px;
+    height: 19px;
+    top: 8px;
+    right: 54px;
+    background:url(../img/open-hover.png) no-repeat ;
+    position: absolute;
+}
+
+
+
+
+
+.modal-login{
+    display: block;
+    position: absolute;
+    width: 275px;
+    height: 214px;
+    top:60px;
+    right: 187px;
+    border-radius: 6px;
+    background: #f8f7f4 ; 
+    box-shadow: 0px 20px 20px rgba(0,0,0,0.4);
+    z-index: 40;
+}
+
+
+.modal-login input {
+    display: block;
+    width: 225px;
+    height: 43px;
+    border-radius: 6px;
+    margin: 17px 9px;
+    margin-left: 15px;
+    padding-left: 15px; 
+    color: black;
+     font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 500;
+}
+a.modal-login-tap{
+    float: left;
+    display: inline-block;
+    vertical-align: top;
+    padding: 10px 31px;
+    text-decoration: none;
+    text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
+    background: #f26843;
+    border-radius: 20px;
+    box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
+    margin-left: -20px;
+    margin-top: -2px;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: bold; 
+}
+.modal-login-tap:hover{
+  background:    -moz-linear-gradient(top, #f58669 0%, #ec6f5e 100%);
+  background: -webkit-linear-gradient(top, #f58669 0%, #ec6f5e 100%);
+  background:         linear-gradient(to bottom, #f58669 0%, #ec6f5e 100%);
+  box-shadow: 0 2px 2px rgba(172, 16, 0, 1);
+}
+.modal-login-tap:active {
+  background:    -moz-linear-gradient(top, #d84732 0%, #e1613e 100%);
+  background: -webkit-linear-gradient(top, #d84732 0%, #e1613e 100%);
+  background:         linear-gradient(to bottom, #d84732 0%, #e1613e 100%);
+  box-shadow: inset 0 2px 2px rgba(172, 16, 0, 1);
+}
+.modal-login  a{
+    float:left;
+    margin-left: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 13px;
+    line-height: 24px;
+    color: #000;
+    font-weight: 500;
+    margin-top: -3px;
+    color: #323232;
+    font-family: 'Roboto', sans-serif;
+    font-size: 13px;
+    line-height: 24px;
+    font-weight: regular;
+}
+
 .basket{
     
     height: 32px;
@@ -297,6 +459,10 @@ body > input[type="radio"] {
     border-radius: 20px;
     background:rgba(225, 225, 225, 0.2) url(../img/basket.png) no-repeat 16px 6px;
     
+}
+
+.container-main{
+    margin-top: 1px;
 }
 .inform{
     display: flex;
@@ -1064,11 +1230,8 @@ border-image: url(../img/back-mail.png) 5 stretch;;
     z-index: 1;
     
 }
-fgfg
 .content-bottom-shop {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    float: right;
     min-height: 30px;
     width: 190px;
     margin-bottom: 30px;
@@ -1087,3 +1250,5 @@ fgfg
     height: 26px;
     border-radius: 100px;
 }
+
+
