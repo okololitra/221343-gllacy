@@ -19,13 +19,13 @@
         <a><img src="img/logo.png" alt="Glassy Shop" height="64" width="154"></a>
         </div>
               <ul class="menu">
-                <li>
-                  <a class="catol" href="">Каталог</a>
+                <li class="catol">
+                  <a href="">Каталог</a>
                   <div class="submenu-wrapp">
                     <ul class="submenu">
-                      <li><a href="">Новинки</a></li>
+                      <li class="big-submenu-text"><a href="">Новинки</a></li>
                       <li><a href="">Сливочное.</a></li>
-                      <li><a href="">Щербеты.</a></li>
+                      <li class="active"><a href="">Щербеты.</a></li>
                       <li><a href="">Фруктовый лед</a></li>
                       <li><a href="">Мелорин</a></li>
                     </ul>
@@ -39,33 +39,33 @@
                 </li>
             </ul>
                 <ul class="user-block">
-                    <li class=""><a  href="#"><div class="search"></div></a>
+                    <li class="search-modal-activ"><a class="search" href="#"></a>
                         <div class="modal-search">
                             <form class="modal-search-form" action="#" method="get">
-                                <input  type="text" name="search" value="" placeholder="Что ищем?">
+                                <input  type="text" name="search" value="Что ищем?"
+                                onfocus="if(this.value==this.defaultValue)this.value='';" onblur="if(this.value=='')this.value=this.defaultValue;">
                             </form>
                         </div>
                     </li>
-                    <li><a class="login"  href="#">Вход</a>
+                    <li class="modal-login-activ"><a class="login"  href="#">Вход</a>
                     <div class="modal-login clearfix">
                             <form  action="#" method="get">
-                                <input  type="text" name="login" value="" placeholder="Электронная почта">
-                                <input  type="password" name="search" value="" placeholder="Пароль">
+                                <input  type="text" name="login" value="Электронная почта" onfocus="if(this.value==this.defaultValue)this.value='';" onblur="if(this.value=='')this.value=this.defaultValue;">
+                                <input  type="text" name="search" value="Пароль"
+                                onfocus="if(this.value==this.defaultValue)this.value='';" onblur="if(this.value=='')this.value=this.defaultValue;">
                                 </form>
                                 <a class="modal-login-tap" href="#">Войти</a>
-                                <a href="#">Забыли пароль?</a>
-                                <a href="#">Новая регистрация</a>
+                                <a class="modal-login-a" href="#">Забыли пароль?</a>
+                                <a class="modal-login-a" href="#">Новая регистрация</a>
                         </div>
-                    
-                    
                     </li>
-                    <li><a  href="#"><div class="basket"></div></a></li>
+                    <li><a class="basket" href="#">Пусто</a></li>
                 </ul> 
          </nav>
     </header>
              <div class="inform">
           <div class="one-timework ">С 10 до 20, ежедневно </div>
-            <div class="two-timework ">8 812 459-25-25</div>
+            <div class="two-timework ">8 812 450-25-25</div>
               </div>
         <div class="slider">
           <div class="slide" id="slide1">
@@ -102,29 +102,29 @@
         <div class="catalog">
             <div class="catalog-product">
                 <img src="img/ice1-index.png" alt="Сливочное" height="267" width="267">
-                <span class="product-price">310₽<span class="kg">/кг</span></span>
+                <span class="product-price">310&#8381;<span class="kg">/кг</span></span>
                 <span class="cat-pro-promo">Сливочное с апельсиновым джемом и цитрусовой стружкой</span>
                     </div>
             <div class="catalog-product">
                 <img src="img/ice2-index.png" alt="Сливочное-шоколадное" height="267" width="267">
-                <span class="product-price">380₽<span class="kg">/кг</span></span>
+                <span class="product-price">380&#8381;<span class="kg">/кг</span></span>
                 <span class="cat-pro-promo">Сливочно-кофейное с кусочками шоколада</span>
             </div>
             <div class="catalog-product">
                 <img src="img/ice3-index.png" alt="Сливочное-клубничное" height="267" width="267">
-                <span class="product-price">355₽<span class="kg">/кг</span></span>
+                <span class="product-price">355&#8381;<span class="kg">/кг</span></span>
                 <span class="cat-pro-promo">Сливочно-клубничное с присыпкой из белого шоколада</span>
             </div>
             <div class="catalog-product">
                 <img src="img/ice4-index.png" alt="Сливочное-крем-брюле" height="267" width="267">
-                <span class="product-price">415₽<span class="kg">/кг</span></span>
+                <span class="product-price">415&#8381;<span class="kg">/кг</span></span>
                 <span class="cat-pro-promo">Сливочное крем-брюле с карамельной подливкой</span>
             </div>
         </div> 
 
           <div class="store-description">
                       <h4>Магазин Глейси — это онлайн и офлайн магазин по продаже мороженого собственного производства на развес</h4>
-              <div class="kk">
+              <div class="store-box">
               <div class="store">
                 <p>Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</p>
               
@@ -138,7 +138,7 @@
           <div class="advertising-bottom">
               <div class="advertising-left-bottom clearfix">
                   <span class="advertising-name-bottom">Новое в нашем блоге</span>
-                  <a href="#">10  способов сервировки <br> фруктовых щербетов к<br>столу</a>
+                  <a href="#">10  способов сервировки фруктовых щербетов к<br>столу</a>
               </div>
               <div class="advertising-right-botton">
                   <span class="adv-text">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =) </span>
@@ -158,19 +158,16 @@
                   <a href="#">Форма обратной связи</a>
                       </div>
                   </div>
-              <div class="ice-map">
-                  <img src="img/ice-map.png" alt="Мороженка" width="80" height="140">
-              </div>
               </div>
               
       </main>
       <footer>
           <div class="container-footer">
             <ul class="footer-social">
-            <li><a  href="#"><div class="social-btn-tv"></div></a></li>
-            <li><a  href="#"><div class="social-btn-inst"></div></a></li>
-            <li><a  href="#"><div class="social-btn-fb"></div></a></li>
-            <li><a  href="#"><div class="social-btn-vk"></div></a></li>
+            <li><a class="social-btn-tv" href="#"></a></li>
+            <li><a class="social-btn-inst" href="#"></a></li>
+            <li><a class=social-btn-fb href="#"></a></li>
+            <li><a class="social-btn-vk" href="#"></a></li>
                 </ul>
         <div class="footer-info">
             <div><a class="big-info" href="#">Для поставщиков</a><br>
@@ -179,13 +176,23 @@
             <a  href="#">Экологические стандарты</a></div>
         </div>
          <ul class="footer-copyright">
-            <li><a href="https://htmlacademy.ru"><div class="btn-academy"></div></a></li>
+            <li><a class="btn-academy" href="https://htmlacademy.ru"></a></li>
             <li><span class="text-academy">Сделано в <a href="#">HTML Academy</a> © 2017</span></li>
          </ul>
         </div>     
       </footer>
-            
-      </div>
+             <div class="modal-content">
+      <button class="modal-content-close" type="button" title="Закрыть">Закрыть</button>
+                 <h3 class="modal-content-h3">Мы обязательно вам ответим!</h3>
+                 <form class="modal-content-form" action="#" method="post">
+                 <input  type="text" name="name" value="">
+                <input type="text" name="mail" value="Ваша почта для ответа?" onfocus="if(this.value==this.defaultValue)this.value='';" onblur="if(this.value=='')this.value=this.defaultValue;">
+                 <label class="modal-label"><span class="label-span">Напишите что нибудь...</span><input class="coment" type="text" name="coment" ></label>
+                     <a href="#">Отправить</a>
+                 </form>  
+            </div>
+            <div class="modal-overlay"></div>
         </div>
+      </div>
   </body>
 </html>

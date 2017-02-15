@@ -61,15 +61,18 @@ body > input[type="radio"] {
   width: 700px;
   margin: 0 auto;
   margin-bottom: 30px;
-
+   line-height:60px;
   font-weight: 800;
   font-size: 60px;
+    margin-top: 5px;
+    margin-left: 225px;
 }
 
 .slide-btn {
   display: inline-block;
-  padding: 11px 45px;
-    margin-top: -15px;
+  padding: 11px 44px;
+    margin-top: 1px;
+    margin-right: -5px;
   font-weight: 600;
   font-size: 31px;
   line-height: 41px;
@@ -102,7 +105,8 @@ body > input[type="radio"] {
 .slider-controls {
   position: absolute;
   bottom: 25px;
-  left: 0;
+  left: 3px;
+    top: 448px;
   z-index: 20;
 
   font-size: 0;
@@ -181,24 +185,32 @@ body > input[type="radio"] {
       display: inline-block;
       position: relative;
       color: white;
-      padding: 10px;
-    padding-right: 10px;
+      
 }
+
+/*
+border-bottom-style: 1px solid rgba(225,225,225,0.5);
+вставить псевдоэлементом к а 
+*/
 
 .menu a {
   text-decoration: none;
   display: block;
-  border-bottom: 1px solid rgba(225,225,225,0.5);
-    font-family: 'Roboto', sans-serif;
     font-size: 16px;
     line-height: 18px;
     color: #fff;
     font-weight: 900;
+    padding: 8px 10px;
+    padding-right: 10px; 
+    position: relative;
+
 }
 
-.menu li:hover {
+
+.menu > li:hover {
   background: white;
   border-radius: 20px;
+    
 }
 
 .menu li:hover a {
@@ -206,59 +218,83 @@ body > input[type="radio"] {
     
 }
 
-
-
-.menu li:active {
-  box-shadow: inset 0 2px 1px rgba(105, 105, 105, 1);
-    background: rgba(237, 237, 237, 1) 
-}
 .menu a:active {
   box-shadow: inset 0 2px 1px rgba(105, 105, 105, 1);
-    background: rgba(237, 237, 237, 1) 
+    background: rgba(237, 237, 237, 1);
+    border-radius: 20px;
 }
 .submenu-wrapp {
   padding-top: 5px;
   position: absolute;
-  display: block;
+  display: none;
   top: 100%;
   left: 0;
+    z-index: 10;
 }
 
 .submenu-wrapp:hover{
     display: block;
+    z-index: 10;
 }
 
 .submenu {
-  width: 140px;
+  width: 143px;
   background: white;
-  padding: 6px;
+    padding: 0px;
  border-radius: 6px;
+    margin-left: -12px;
+    margin-top: 0px;
+    height: 171px;
+    box-shadow: 0px 20px 20px rgba(0,0,0,0.4);
 }
 
-.menu li:hover .submenu-wrapp {
+li:hover .submenu-wrapp {
   display: block;
 }
 
 .submenu li {
   display: block;
-    text-decoration: none;
-}
-.submenu li:hover {
-  background: #323232;
-  border-radius: 20px;
     
 }
+
+.big-submenu-text{
+    border-bottom: 2px solid #000;
+    
+}
+
+
 .submenu a {
-  color: black;
-     font-family: 'Roboto', sans-serif;
+    color: #323232;
     font-size: 14px;
     line-height: 16px;
-    font-weight: 500;
+    font-weight: 400;
     text-decoration: none;
+    border: none;
+    padding: 0px ;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
-.submenu a:hover{
-    color: black;
-    
+.big-submenu-text a{
+    font-weight: 900;
+}
+.submenu a:hover {
+  background: #fbded8;
+    border-radius: 0px;    
+}
+.submenu  a:active{
+    background: #f6b5a5;
+    border-radius: 0px;
+    margin: auto;  
+}
+.submenu  a .active{
+    background: #d07058;
+    border-radius: 0px;
+    margin: auto;  
+}
+
+.menu li:hover .submenu-wrapp {
+  display: block;
 }
 
 
@@ -280,27 +316,35 @@ body > input[type="radio"] {
     
 }
 .search{ 
-    background:rgba(225, 225, 225, 0.2) url(../img/lupa.png) no-repeat 8px 8px;
+    display: inline-block;
+    vertical-align: top;
+    color: #fff;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 500;
+    text-decoration: none;
+    background:rgba(225, 225, 225, 0.2) url(../img/lupa.png) no-repeat 8px 7px;
     border-radius: 50px;
     width: 32px;
     height: 32px;  
     position: relative;
+    margin-left: -2px;
 
 }
+
+
 .search::before{
     content: "";
-    width: 100px;
+    width: 40px;
     height: 20px;
     display: block;
     position: absolute;
-    background: #fff;
     top:25px;
     right:0px;
-    z-index: 10;
     
 }
 .search:hover{
-    background:#fff url(../img/lupa-hover.png) no-repeat 8px 8px;
+    background:#fff url(../img/lupa-hover.png) no-repeat 8px 7px;
     border-radius: 50px;
     width: 32px;
     height: 32px;
@@ -318,10 +362,10 @@ body > input[type="radio"] {
     top: 60px;
     box-shadow: 0px 20px 20px rgba(0,0,0,0.4);
 }
-.user-block a:hover+.modal-search{
+.search-modal-activ a:hover+.modal-search{
     display: block;
 }
-.user-block:hover .modal-search{
+.search-modal-activ:hover .modal-search{
     display: block;
 }
 .modal-search input {
@@ -331,13 +375,13 @@ body > input[type="radio"] {
     border-radius: 6px;
     margin: 18px 12px;
     padding-left: 15px;
+    color: #a7a7a7 ;    
     
 }
 .login{
     display: inline-block;
     vertical-align: top;
     color: #fff;
-     font-family: 'Roboto', sans-serif;
     font-size: 14px;
     line-height: 16px;
     font-weight: 500;
@@ -348,14 +392,22 @@ body > input[type="radio"] {
     padding-right: 14px;
     border-radius: 20px;
     position: relative;
+    margin-right: 3px;
 }
-
+.login::after{
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 10px;
+    top: 30px;
+    right: 0px;
+}
 .login::before{
     content: "";
     width: 21px;
     height: 19px;
-    top: 8px;
-    right: 54px;
+    top: 6px;
+    right: 55px;
     background:url(../img/OPEN.png) no-repeat ;
     position: absolute; 
 }
@@ -376,23 +428,26 @@ body > input[type="radio"] {
 
 
 
-
+.modal-login-activ{
+    position: relative
+}
 
 .modal-login{
     display: block;
     position: absolute;
     width: 275px;
     height: 214px;
-    top:60px;
-    right: 187px;
+    top:36px;
+    right: 0px;
     border-radius: 6px;
     background: #f8f7f4 ; 
     box-shadow: 0px 20px 20px rgba(0,0,0,0.4);
-    z-index: 40;
+    z-index: 10;
 }
 
 
 .modal-login input {
+    color: #a7a7a7 ;
     display: block;
     width: 225px;
     height: 43px;
@@ -400,13 +455,11 @@ body > input[type="radio"] {
     margin: 17px 9px;
     margin-left: 15px;
     padding-left: 15px; 
-    color: black;
-     font-family: 'Roboto', sans-serif;
     font-size: 14px;
     line-height: 24px;
     font-weight: 500;
 }
-a.modal-login-tap{
+.modal-login-tap{
     float: left;
     display: inline-block;
     vertical-align: top;
@@ -419,7 +472,6 @@ a.modal-login-tap{
     margin-left: -20px;
     margin-top: -2px;
     color: #fff;
-    font-family: 'Roboto', sans-serif;
     font-size: 18px;
     line-height: 24px;
     font-weight: bold; 
@@ -436,30 +488,61 @@ a.modal-login-tap{
   background:         linear-gradient(to bottom, #d84732 0%, #e1613e 100%);
   box-shadow: inset 0 2px 2px rgba(172, 16, 0, 1);
 }
-.modal-login  a{
+
+
+
+
+a.modal-login-a{
+    display: inline-block;
     float:left;
     margin-left: 20px;
-    font-family: 'Roboto', sans-serif;
-    font-size: 13px;
-    line-height: 24px;
     color: #000;
-    font-weight: 500;
     margin-top: -3px;
     color: #323232;
-    font-family: 'Roboto', sans-serif;
     font-size: 13px;
     line-height: 24px;
     font-weight: regular;
 }
 
+
+
+.modal-login-activ a:hover+.modal-login{
+    display: block;
+}
+.modal-login-activ:hover .modal-login{
+    display: block;
+}
+
 .basket{
-    
-    height: 32px;
-    width: 117px;
+    display: inline-block;
+    vertical-align: top;
+    color: #fff;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 500;
+    text-decoration: none;
+    background-color:rgba(225, 225, 225, 0.2); 
+    padding: 0px;
+    padding-left: 43px;
+    padding-right: 15px;
+    padding-top: 8px;
+    height: 22px;
+    width: 60px;
     border-radius: 20px;
-    background:rgba(225, 225, 225, 0.2) url(../img/basket.png) no-repeat 16px 6px;
+    background:rgba(225, 225, 225, 0.2);
+    position: relative;
     
 }
+.basket::before{
+content: "";
+    width: 30px;
+    height: 30px;
+    top: -1px;
+    right: 80px;
+    background:url(../img/basket.png) no-repeat 8px 7px;
+    position: absolute; 
+}
+
 
 .container-main{
     margin-top: 1px;
@@ -472,7 +555,6 @@ a.modal-login-tap{
     
 }
  .one-timework {
-    font-family: 'Roboto', sans-serif;
     font-size: 14px;
     line-height: 16px;
     color: #fff;
@@ -480,16 +562,18 @@ a.modal-login-tap{
       margin: 0 0 0 auto;
 }
 .two-timework {
-    font-family: 'Roboto', sans-serif;
     font-size: 22px;
     line-height: 24px;
     color: #fff;
     font-weight: 900;
     margin: 0 0 0 auto;
+    margin-top: 3px;
+    margin-right: -3px;
 }
 
 .advertising {
-    margin-top: 40px;
+    margin-top: 41px;
+    margin-left: 2px;
     display: flex;
     flex-direction: row;
     justify-content:space-between   
@@ -505,18 +589,16 @@ a.modal-login-tap{
     width: 560px;
 }
 .advertising-name {
-    margin-left: 21px;
-    margin-top: 15px;
-    font-family: 'Roboto', sans-serif;
+    margin-left: 19px;
+    margin-top: 16px;
     font-size: 35px;
     line-height: 41px;
     color: #fff;
     font-weight: 900;
 }
 .advertising-text {
-    padding-left: 21px;
+    padding-left: 19px;
     margin-top: -20px;
-    font-family: 'Roboto', sans-serif;
     font-size: 18px;
     line-height: 22px;
     color: #fff;
@@ -526,8 +608,9 @@ a.modal-login-tap{
     float: right;
     display: inline-block;
     vertical-align: top;
-    
-    padding: 12px 20px;
+    font-size: 18px;
+    line-height: 24px;
+    padding: 12px 21px;
     color: #ffffff;
     text-decoration: none;
     text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
@@ -535,7 +618,7 @@ a.modal-login-tap{
     border-radius: 100px;
     box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
     margin-right: 21px;
-    margin-top:50px;
+    margin-top:44px;
 }
 .advertising-tap:hover{
   background:    -moz-linear-gradient(top, #f58669 0%, #ec6f5e 100%);
@@ -550,12 +633,14 @@ a.modal-login-tap{
   box-shadow: inset 0 2px 2px rgba(172, 16, 0, 1);
 }
 .catalog {
-    margin-top: 42px;
+    
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     flex-basis: 1148px;
     margin-bottom: 40px;
+    margin-left: 3px;
+    margin-top: 40px;
 }
 
 
@@ -577,7 +662,6 @@ a.modal-login-tap{
 .product-price{
     position: absolute;
     top: 210px;
-    font-family: 'Roboto', sans-serif;
     font-size: 45px;
     line-height: 45px;
     color: #fff;
@@ -586,12 +670,12 @@ a.modal-login-tap{
 }
 .kg{
     position: absolute;
-    font-family: 'Roboto', sans-serif;
     font-size: 30px;
-    line-height: 45px;
+    line-height: 51px;
     color: #fff;
-    font-weight: 900;
+    font-weight: 600;
     width: 50px;
+    margin-left: 2px;
 }
 .cat-pro-promo{
     width: 265px;
@@ -604,6 +688,7 @@ a.modal-login-tap{
     font-weight: 500;
     text-decoration:underline;
     text-align:center;
+    margin-top: 7px;
     
 }
 .catalog-product-hover:hover{
@@ -619,14 +704,14 @@ a.modal-login-tap{
 }
 
 .store-description {
-    margin-top: 80px;
-    width: 1148px;
-    min-height: 308px;
+    margin-top: 95px;
+    margin-left: 2px;
+    width: 1147px;
+    min-height: 307px;
     margin-bottom: 40px;
     position: relative;
     background: #efe2c9 url("../img/background-info.png") no-repeat;
     border-radius: 16px;
-    font-family: 'Roboto', sans-serif;
     font-size: 16px;
     line-height: 22px;
     color: #000;
@@ -636,10 +721,9 @@ a.modal-login-tap{
     position: absolute;
     display: inline-block;
     margin-top: 23px;
-    margin-left: 22px;
+    margin-left: 20px;
     margin-right: 126px;
     width: 1000px;
-    font-family: 'Roboto', sans-serif;
     font-size: 24px;
     line-height: 30px;
     color: #000;
@@ -647,7 +731,7 @@ a.modal-login-tap{
 }
 
 
-.kk{
+.store-box{
     display: flex;
     flex-direction: row;
 }
@@ -658,7 +742,7 @@ a.modal-login-tap{
     padding-left: 76px;
     width: 484px;
 }
-.kk::before{
+.store-box::before{
     content: "";
     position: absolute;
     background: url(../img/img-1.png) no-repeat;
@@ -667,7 +751,7 @@ a.modal-login-tap{
     left: 20px;
     top: 92px; 
 }
-.kk::after{
+.store-box::after{
     content: "";
     position: absolute;
     background: url(../img/imf-2.png) no-repeat;
@@ -704,6 +788,7 @@ a.modal-login-tap{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin-left: 1px;
 }
 .advertising-left-bottom{
     width: 560px;
@@ -716,7 +801,7 @@ a.modal-login-tap{
 .advertising-name-bottom{
     
     margin-left:20px;
-    margin-top:30px;
+    margin-top:23px;
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     line-height: 22px;
@@ -725,7 +810,9 @@ a.modal-login-tap{
     
 }
 .advertising-left-bottom  a{
+    width: 310px;
     margin-left: 20px;
+    margin-top: 2px;
     font-family: 'Roboto', sans-serif;
     font-size: 24px;
     line-height: 30px;
@@ -754,28 +841,38 @@ border-image: url(../img/back-mail.png) 5 stretch;;
     border-radius: 20px;
 }
 .adv-text{
-    margin-top:34px;
-    margin-left:28px;  
+    margin-top:28px;
+    margin-left:24px;  
     margin-right: 26px;
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     line-height: 22px;
     color: #000;
     font-weight: 400;
+    width: 511px;
     
 }
 .advertising-form{
-    margin-top: 30px;
-    margin-left: 28px;  
+    margin-top: 34px;
+    margin-left: 24px;  
 }
 .advertising-form input{
     border-radius: 6px;
     width: 352px;
     height: 42px;
-    padding-left: 15px;
+    padding-left: 12px;
+    font-size: 16px;
+  line-height: 24px;
+     font-weight: 500;
+    
+    
+    
+    
+    
 }
 .advertising-form button{
-    margin-left:6px;
+    margin-top: 1px;
+    margin-left:3px;
     width: 130px;
     height: 44px;
     display: inline-block;
@@ -810,8 +907,8 @@ border-image: url(../img/back-mail.png) 5 stretch;;
 }
 .map {
     position: relative;
-    margin-top: 40px;
-    margin-left: -27px;
+    margin-top: 30px;
+    margin-left: -25px;
     width: 1200px;
     height: 430px;
     background: url(../img/map.png) no-repeat;
@@ -826,6 +923,17 @@ border-image: url(../img/back-mail.png) 5 stretch;;
     border-radius: 16px;
     color: #000;
 }
+.map-contacts::before{
+    content: "";
+    position: absolute;
+    top:138px ;
+    left:266px ;
+    width:80px;
+    height:140px;
+    background: url(../img/ice-map.png) no-repeat;
+    
+}
+
 .map-text {
     
     margin-top: 32px;
@@ -896,15 +1004,7 @@ border-image: url(../img/back-mail.png) 5 stretch;;
   background:         linear-gradient(to bottom, #d84732 0%, #e1613e 100%);
   box-shadow: inset 0 2px 2px rgba(172, 16, 0, 1);
 }
-.ice-map{
-    position: absolute;
-    top:138px ;
-    left:266px ;
-    width:80px;
-    height:140px;
-    background: url(../img/ice-map.png) no-repeat;
-    
-}
+
 .container-footer{
     display: flex;
     flex-direction: row;
@@ -913,12 +1013,12 @@ border-image: url(../img/back-mail.png) 5 stretch;;
     
 }
 .footer-social {
-    margin-top: 36px;
+    margin-top: 32px;
     display: flex;
     justify-content:space-between;
     flex-direction: row;
     width: 187px;
-    margin-left: -40px;
+    margin-left: -39px;
     
 }
 .footer-social li{  
@@ -927,27 +1027,67 @@ border-image: url(../img/back-mail.png) 5 stretch;;
 }
 
 .social-btn-tv{
+    display: block;
     width: 32px;
     height: 32px;
     border: 3px solid rgba(225, 225, 225, 0.2);
     border-radius: 50px;
     background:  url(../img/tvit.png) no-repeat ;
 }
+.social-btn-tv:hover{
+    display: block;
+    width: 32px;
+    height: 32px;
+    border: 3px solid rgba(225, 225, 225, 0.2);
+    border-radius: 50px;
+    background:  url(../img/tvit-hover.png) no-repeat ;
+}
+.social-btn-tv:active{
+    display: block;
+    width: 32px;
+    height: 32px;
+    border: 3px solid rgba(225, 225, 225, 0.2);
+    border-radius: 50px;
+    background:  url(../img/tvit.png) no-repeat ;
+    box-shadow: inset 0 2px 2px rgba(105, 105, 105, 1);
+}
+
 .social-btn-inst{
+    display: block;
     width: 32px;
     height: 32px;
     border: 3px solid rgba(225, 225, 225, 0.2);
     border-radius: 50px;
     background: url(../img/inst.png) no-repeat ;
 }
+.social-btn-inst:active{
+    display: block;
+    width: 32px;
+    height: 32px;
+    border: 3px solid rgba(225, 225, 225, 0.2);
+    border-radius: 50px;
+    background: url(../img/inst.png) no-repeat ;
+       box-shadow: inset 0 2px 2px rgba(105, 105, 105, 1);
+}
 .social-btn-fb{
+    display: block;
     width: 32px;
     height: 32px;
     border: 3px solid rgba(225, 225, 225, 0.2);
     border-radius: 50px;
     background: url(../img/fb.png) no-repeat ;
 }
+.social-btn-fb:active{
+    display: block;
+    width: 32px;
+    height: 32px;
+    border: 3px solid rgba(225, 225, 225, 0.2);
+    border-radius: 50px;
+    background: url(../img/fb.png) no-repeat ;
+     box-shadow: inset 0 2px 2px rgba(105, 105, 105, 1);
+}
 .social-btn-vk{
+    display: block;
     width: 32px;
     height: 32px;
     border: 3px solid rgba(225, 225, 225, 0.2);
@@ -955,7 +1095,16 @@ border-image: url(../img/back-mail.png) 5 stretch;;
     background: url(../img/vk.png) no-repeat ;
     
 }
-   
+.social-btn-vk:active{
+    display: block;
+    width: 32px;
+    height: 32px;
+    border: 3px solid rgba(225, 225, 225, 0.2);
+    border-radius: 50px;
+    background: url(../img/vk.png) no-repeat ;
+      box-shadow: inset 0 2px 2px rgba(105, 105, 105, 1);
+    
+}
 .footer-info {
     position: relative;
     width: 560px;
@@ -974,10 +1123,10 @@ border-image: url(../img/back-mail.png) 5 stretch;;
 }
 
 .footer-info a:hover{
-  color: #e84d37; 
+  color: #ffbc9e; 
 }
 .footer-info a:active{
-  color: #e84d37; 
+  color: #ffbc9e; 
 }
 .footer-info::after{
     content: "";
@@ -985,16 +1134,16 @@ border-image: url(../img/back-mail.png) 5 stretch;;
     background: url(../img/love.png) no-repeat;
     width: 15px;
     height: 13px;
-    top: 40px;
-    left:148px;
+    top: 36px;
+    left:156px;
 }
 .footer-info div:first-child{
-    margin-top: 37px;
-    margin-left: 170px;
+    margin-top: 30px;
+    margin-left: 178px;
 }
 .footer-info div:last-child{
     margin-top: -43px;
-    margin-left: 315px;
+    margin-left: 320px;
 }
 .big-info{
     font-family: 'Roboto', sans-serif;
@@ -1004,10 +1153,12 @@ border-image: url(../img/back-mail.png) 5 stretch;;
 }
 .footer-copyright {
     width: 192px;
-    margin-top: 20px;
+    margin-top: 18px;
+    margin-right: -6px;
     
 }
 .btn-academy{
+    display: block;
     height: 40px;
     width: 110px;
     background: url(../img/logo-academy.png) no-repeat; 
@@ -1024,11 +1175,16 @@ border-image: url(../img/back-mail.png) 5 stretch;;
     color: #fff;
 }
 .footer-copyright a:hover{
-    color: #e84d37;
+    color: #ffbc9e;
 }
 .footer-copyright a:active{
-    color: #e84d37;
+    color: #ffbc9e;
 }
+
+
+
+
+
 
 
 
@@ -1237,7 +1393,6 @@ border-image: url(../img/back-mail.png) 5 stretch;;
     margin-bottom: 30px;
 }
 .content-bottom-shop a{
-    font-family: 'Roboto', sans-serif;
     font-size: 16px;
     line-height: 18px;
     font-weight: 600;
@@ -1250,5 +1405,150 @@ border-image: url(../img/back-mail.png) 5 stretch;;
     height: 26px;
     border-radius: 100px;
 }
+.modal-overlay {
+    display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 20;
 
+  width: 100%;
+  height: 100%;
 
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.modal-content {
+    display: none;
+    position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 452px;
+    height: 442px;
+    border-radius: 6px;
+    margin-left: -230px;
+    padding: 0px;
+    padding-left: 25px;
+    margin-top: -220px;
+  color: #000000;
+  background-color: #f8f7f4 ;
+    z-index: 21;
+}
+.modal-content-h3{
+     font-size: 24px;
+    line-height: 28px;
+    font-weight: 600;
+    color: #323232;
+    margin-top: 17px;
+    margin-left: -1px;
+    
+}
+.modal-content-form{
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 600;
+    
+}
+.modal-content-form input{
+    color:#b8b8b8; ;
+    width: 253px;
+    height: 42px;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    padding-left: 12px;
+    margin-top: -5px;
+    
+}
+input.coment{
+    width: 405px;
+    height: 152px;
+    padding: 0px;
+    padding-left: 20px;
+    padding-top: -50px;
+    position: relative;
+}
+.modal-content label{
+    position: absolute;
+    left: 38px;
+    top: 200px;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 300;
+    color:  #b8b8b8;
+}
+
+.modal-label{
+    position: relative;
+}
+.label-span{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+.modal-content-form a{
+    float: right;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 900;
+    border-radius: 32px;
+    margin-top: 6px;
+    margin-right: 23px;
+    
+    display: inline-block;
+  padding: 10px 25px;
+  vertical-align: top;
+  color: #ffffff;
+  text-decoration: none;
+  text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
+
+  background: #f26843;
+  background:    -moz-linear-gradient(top, #f26843 0%, #e74a35 100%);
+  background: -webkit-linear-gradient(top, #f26843 0%, #e74a35 100%);
+  background:         linear-gradient(to bottom, #f26843 0%, #e74a35 100%);
+  border-radius: 100px;
+  box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64); 
+}
+.modal-content-form a:hover {
+  background:    -moz-linear-gradient(top, #f58669 0%, #ec6f5e 100%);
+  background: -webkit-linear-gradient(top, #f58669 0%, #ec6f5e 100%);
+  background:         linear-gradient(to bottom, #f58669 0%, #ec6f5e 100%);
+  box-shadow: 0 2px 2px rgba(172, 16, 0, 1);
+}
+.modal-content-form a:active {
+  background:    -moz-linear-gradient(top, #d84732 0%, #e1613e 100%);
+  background: -webkit-linear-gradient(top, #d84732 0%, #e1613e 100%);
+  background:         linear-gradient(to bottom, #d84732 0%, #e1613e 100%);
+  box-shadow: inset 0 2px 2px rgba(172, 16, 0, 1);
+}
+
+.modal-content-close {
+    position: absolute;
+  top: 12px;
+  right: 17px;
+  width: 22px;
+  height: 22px;
+ background: none;
+  font-size: 0;
+  border: 0;
+  cursor: pointer;
+}
+.modal-content-close::before,
+.modal-content-close::after {
+  content: "";
+  position: absolute;
+    top: 10px;
+  left: 2px;
+
+  width: 25px;
+  height: 2px;
+  background-color: #d0d0d0;
+  border-radius: 1px;
+}
+
+.modal-content-close::before {
+  transform: rotate(45deg);
+}
+
+.modal-content-close::after {
+  transform: rotate(-45deg);
+}
