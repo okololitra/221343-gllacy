@@ -21,22 +21,23 @@
                         <a><img src="img/logo.png" alt="Glassy Shop" height="64" width="154"></a>
                     </div>
                     <ul class="menu">
-                        <li class="catol">
+                        <li class="catol menu-li">
                             <a href="#">Каталог</a>
                             <div class="submenu-wrapp">
                                 <ul class="submenu">
                                     <li class="big-submenu-text"><a href="#">Новинки</a></li>
                                     <li><a href="catalog.html">Сливочное</a></li>
-                                    <li class="active"><a href="#">Щербеты</a></li>
+                                    <li><a href="#">Щербеты</a></li>
                                     <li><a class="submenu-fruit" href="#">Фруктовый лед</a></li>
                                     <li><a class="submenu-melorin" href="#">Мелорин</a></li>
+
                                 </ul>
                             </div>
                         </li>
-                        <li>
+                        <li class="menu-li">
                             <a href="#">Доставка и оплата</a>
                         </li>
-                        <li>
+                        <li class="menu-li">
                             <a href="#">О компании</a>
                         </li>
                     </ul>
@@ -132,13 +133,13 @@
                     <h4>Магазин Глейси — это онлайн и офлайн магазин по продаже мороженого собственного производства на развес</h4>
                     <div class="store-box">
                         <div class="store">
-                            <p>Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</p>
-                            <p class="store-p-last">Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.</p>
+                            <p class="store-ice">Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</p>
+                            <p class="store-p-last store-list">Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.</p>
                         </div>
                         <div class="store-2">
-                            <p>Закупка ингредиентов производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</p>
+                            <p class="store-cow">Закупка ингредиентов производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</p>
 
-                            <p class="store-p-last">Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</p>
+                            <p class="store-p-last store-temp">Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</p>
                         </div>
                     </div>
                 </div>
@@ -156,6 +157,7 @@
                     </div>
                 </div>
                 <div class="map clearfix">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3997.133481958269!2d30.32232805076484!3d59.93933116401205!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1486675670385" height="430" width="100%" style="border:0" allowfullscreen></iframe>
                     <div class="map-contacts ">
                         <div class="map-text"><b>Адрес главного офиса</b>
 
@@ -203,16 +205,14 @@
             <div class="modal-content">
                 <button class="modal-content-close" type="button" title="Закрыть">Закрыть</button>
                 <h3 class="modal-content-h3">Мы обязательно вам ответим!</h3>
-                <form class="modal-content-form" action="#" method="post">
+                <form class="modal-content-form" id="modal" action="#" method="post">
                     <label>
-                        <input class="input-name" type="text" name="name" value="" placeholder="Как вас зовут?">
+                        <input class="input-name" type="text" name="name" value="" placeholder="Как вас зовут?" required>
                     </label>
                     <label>
-                        <input class="input-mail" type="text" name="mail" value="" placeholder="Ваша почта для ответа?">
+                        <input class="input-mail" type="text" name="mail" value="" placeholder="Ваша почта для ответа?" required>
                     </label>
-                    <label>
-                        <input class="coment" placeholder="Напишите что нибудь..." type="text" name="coment">
-                    </label>
+                    <textarea class="coment" form="modal" placeholder="Напишите что нибудь..." name="coment"></textarea>
                     <a href="#">Отправить</a>
                 </form>
 
@@ -220,6 +220,7 @@
             <div class="modal-overlay"></div>
         </div>
     </div>
+    <script type="text/javascript" src="js/script.min.js" async></script>
 </body>
 
 </html>

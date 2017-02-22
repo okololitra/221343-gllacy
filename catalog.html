@@ -6,7 +6,7 @@
     <title>HTML Academy: Глейси</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:700,900,500&subset=latin,cyrillic" rel="stylesheet" type="text/css">
     <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/style.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -18,22 +18,22 @@
                         <a href="index.html"><img src="img/logo.png" alt="Glassy Shop" height="64" width="154"></a>
                     </div>
                     <ul class="menu">
-                        <li class="catol active-catol">
+                        <li class="catol active-catol menu-li">
                             <a href="#">Каталог</a>
                             <div class="submenu-wrapp">
                                 <ul class="submenu">
                                     <li class="big-submenu-text"><a href="#">Новинки</a></li>
                                     <li><a href="catalog.html">Сливочное</a></li>
-                                    <li class="active"><a href="#">Щербеты</a></li>
+                                    <li><a href="#">Щербеты</a></li>
                                     <li><a class="submenu-fruit" href="#">Фруктовый лед</a></li>
                                     <li><a class="submenu-melorin" href="#">Мелорин</a></li>
                                 </ul>
                             </div>
                         </li>
-                        <li>
+                        <li class="menu-li">
                             <a href="">Доставка и оплата</a>
                         </li>
-                        <li>
+                        <li class="menu-li">
                             <a href="">О компании</a>
                         </li>
                     </ul>
@@ -141,7 +141,7 @@
                             </div>
                         </div>
                         <div class="filler-chec">
-                            <h4 class="filter-text filler-chec-text">Наполнители</h4>
+                            <h4 class="filter-text filler-chec-text">Наполнители:</h4>
                             <div class="filler-chek-input filter-text-2">
                                 <input class="filter-input-first" type="checkbox" id="5" name="option1" value="a1" checked>
                                 <label for="5">шоколадные </label>
@@ -269,21 +269,21 @@
                         </div>
                     </div>
                 </div>
-                <div class="pagination clearfix">
-                    <ul>
-                        <li>
-                            <a class="pagination-left"></a>
-                        </li>
-                        <li> <a class="active">1</a></li>
-                        <li> <a href="#">2</a></li>
-                        <li> <a href="#">3</a></li>
-                        <li> <a href="#">4</a></li>
-                        <li> <a href="#">5</a></li>
-                        <li>
-                            <a href="#" class="pagination-right"></a>
-                        </li>
-                    </ul>
-                </div>
+
+                <ul class="pagination clearfix">
+                    <li>
+                        <a class="pagination-left"></a>
+                    </li>
+                    <li> <a class="active">1</a></li>
+                    <li> <a href="#">2</a></li>
+                    <li> <a href="#">3</a></li>
+                    <li> <a href="#">4</a></li>
+                    <li> <a href="#">5</a></li>
+                    <li>
+                        <a href="#" class="pagination-right"></a>
+                    </li>
+                </ul>
+
             </main>
             <footer>
                 <div class="container-footer">
